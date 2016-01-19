@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="calendarDemoApp">
+<head>
+<title>Calendar Directive Challenge</title>
+<link rel="stylesheet" type="text/css" href="./main.css" />
+</head>
+<body ng-controller="calendarCtrl">
+
+<!-- your code for nav and calendar directive instance here -->
+	<div class="wrapper">
+
+		<nav class="nav">
+		  <select ng-model="date.month">
+		    <option ng-repeat="month in months" value="{{ $index }}" ng-selected="$index == date.month">{{ month }}</option>
+		  </select>
+		  <select ng-model="date.year">
+		    <option ng-repeat="year in years" value="{{ year }}" ng-selected="year == date.year">{{ year }}</option>
+		  </select>
+		</nav>
+		
+
+		<li my-calendar="currentDate" ng-class="{otherMonth: !isCurrentMonth(day.date)}">
+		  {{ day.date.getDate() }}
+		</li>
+
+	</div>
+
+<script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="./utilities/calendar-range/calendarRange.js"></script>
+<script type="text/javascript" src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* your css code goes here */
+
+ul, li, select {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	max-width: 1500px;
+	margin: 0 auto;
+}
+
+select {
+	margin-bottom: 30px;
+}
+
+.month {
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.month li {
+	padding: 20px;
+	font-size: 2rem;
+	list-style: none;
+	width: 14.285%;
+	height: 10rem;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-top: 1px solid #969696;
+	border-left: 1px solid #969696;
+}
+
+.month li:nth-child(7n){
+	border-right: 1px solid #969696;
+}
+
+.month li:nth-last-child(-n+7) {
+	border-bottom: 1px solid #969696;
+}
+
+.month li.otherMonth {
+	background: #eaeaea;
+	color: #949392;
+}
+
